@@ -1,0 +1,260 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    touch-action: none;
+    overflow: hidden;
+    font-family: 'GothamProRegular';
+}
+.warning{
+    display: block;
+}
+
+.wrapper{
+    transition: 0.5s;
+    width: 100vw;
+    height: 300vh;
+    transform: translate(0,0);
+    position: fixed;
+    background-image: url(../assets/background.jpg);
+    background-size: cover;
+    visibility: hidden;
+}
+
+.wrapper >div {
+    height: 100vh;
+    position: relative;
+}
+
+.top div:not(.footer){
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+}
+
+.top >div img , .top >div p{
+    position: absolute;
+}
+
+.top >div:not(.footer) p{
+    color: #0d319c;
+    font-size: 20px;
+    top: 0;
+}
+
+.top .img-point{
+    left: 440px;
+    top: 235px;
+}
+
+.top .img-gp{
+    left: 138px;
+    top: 390px;
+}
+
+.top .img-sd{
+    left: 335px;
+    top: 490px;
+}
+
+.top .img-cc{
+    left:680px;
+    top: 470px;
+}
+
+.top .img-point div{
+    transform: scale(0.5, 0.5);
+}
+
+.top .img-gp div{
+    transform: scale(0.3, 0.3);
+}
+
+.top .img-sd div, .img-cc div{
+    transform: scale(0.2, 0.2);
+}
+
+.top div img:first-child{
+    transform: scale(0.2, 0.2);
+    animation: last 2s ease-in-out infinite;
+}
+
+.top div:not(.footer) img:nth-child(2){
+    transform: scale(0.5, 0.5);
+    animation: second 4s ease-in-out infinite;
+}
+
+@keyframes last {
+    50% { transform: scale(1.7, 1.7); }
+    100% {transform: scale(0.2, 0.2);}
+   }
+
+@keyframes second {
+    50% { transform: scale(1.2, 1.2); }
+    100% {transform: scale(0.5, 0.5);}
+   }
+
+.top-label{
+    position: absolute;
+    font-size: 50px;
+    left: 50px;
+    top: 100px;
+    color: #0d319c;
+}
+
+.mid div:first-child{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mid div:first-child > div{
+    width: 600px;
+    height: 150px;
+    text-align: center;
+    display: block;
+}
+
+.mid div:first-child p{
+    font-size: 50px;
+    color: white;
+    font-family: "GothamProLight";
+}
+
+.mid > img{
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.footer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+}
+
+.footer p{
+    position: absolute;
+    top: 10px;
+    font-size: 15px;
+    color: white;
+    font-family: "GothamProLight";
+}
+
+.glow{
+    position: absolute;
+    bottom: 0;
+    width: 800px;
+}
+
+.footer img:last-child{
+    position: absolute;
+    top: 40px;
+    width: 40px;
+}
+
+.slider-wrapper{
+    position: absolute;
+    transition: 0.5s;
+    width: 300vw;
+    height: 100%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform: translate(-200vw);
+}
+
+.slider-wrapper div{
+    width: 100vw;
+}
+
+.slide3{
+    background-image: url(../assets/slide1.png);
+    background-size:cover;
+}
+
+.slide2{
+    background-image: url(../assets/slide2.png);
+    background-size:cover;
+}
+
+.slide1 {
+    background-image: url(../assets/slide3.png);
+    background-size:cover;
+}
+
+.slider-body{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 50px;
+    z-index: 10;
+    height: 100px;
+    width: 100vw;
+}
+
+.toggle-line{
+    width: 80%;
+    position: absolute;
+    top: 40px;
+}
+
+.toggle-ice{
+    position: absolute;
+    transform: translate(-50%);
+    width: 50px;
+}
+
+.left {
+    left: 12vw;
+}
+
+.center{
+    left:50vw;
+}
+
+.right{
+    left: 86vw;
+}
+
+.step-wrapper{
+    position: fixed;
+    right: 20px;
+    top: 50vh;
+    transform: translate(0, -50%);
+    z-index: 10;
+}
+
+.step{
+    width: 10px;
+    height: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.step-active{
+    background-color: coral;
+}
+
+
+@media all and (width:1024px){
+    .warning{
+        display: none;
+    }
+    .wrapper{
+        visibility:visible;
+    }
+}
